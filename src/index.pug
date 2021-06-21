@@ -1,0 +1,764 @@
+doctype html
+
+html
+  head
+    meta(charset="utf-8")
+    meta(name="description" content="SnO2WMaN's Website")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    link(rel="stylesheet" href="./index.scss" )
+  body
+    #bg
+    nav
+      .profile
+        .icon
+          .cover
+          img(src="https://scrapbox.io/api/pages/sno2wman/2021.05.27/icon#.png")
+        .caret
+          .left
+          .right
+      .form
+        #create-page
+          .bar-h
+          .bar-v
+        #searchbox
+          .bg
+          img.search(src="./search.svg")
+
+    #container
+      header
+        #project
+          .caret
+            .left
+            .right
+          .title
+            .cover
+            .cover
+            .cover
+            p インターネット・エクスプローラー 2.0
+
+        #control
+          #sizer
+            .nob
+            .bar
+          #sorter
+            span Date modified
+            .caret
+              .left
+              .right
+
+      ul#pages
+        -
+          const pages = [
+            {
+              "title": "SnO2WMaN",
+              "thumbnail": "https://scrapbox.io/api/pages/sno2wman/2021.05.27/icon#.png",
+
+            },
+            {
+              "title": "欲しい物リスト",
+              "thumbnail": "https://gyazo.com/38709fc3092b5b9aa0e0796b7776933b/raw",
+
+            },
+            {
+              "title": "日報",
+              "lines": [
+                "<p>ネット・サーフィン</p>"
+              ]
+            },
+            {
+              "title": "skillset",
+              "lines": [
+                "<p>参考</p>",
+                "<a>https://jp.quora.com/どうやってテクノロジーを追いかけていますか-ジュ</a>"
+              ]
+            },
+            {
+              "title": "見ているぞ",
+              "lines": [
+                "<img src='https://scrapbox.io/api/pages/ci7lus-diary/ci7lus/icon'/>",
+                "<p><a>/ci7lus</a></p>",
+                "<p><a>/ci7lus-diary</a></p>"
+              ]
+            },
+            {
+              "title": "成し",
+              "lines": [
+                "<p>これは輝かしきおれの歴史</p>",
+              ]
+            },
+            {
+              "title": "自由研究",
+              "lines": [
+                "<p>SnO₂WMaNの青春の夢</p>",
+              ]
+            },
+            {
+              "title": "もらったものリスト",
+              "thumbnail": "https://gyazo.com/90c14704426989e3128d4021782d4c06/raw",
+            },
+            {
+              "title": "いつか役に立つといいね",
+               "lines": [
+                "<p><a>ノートPCを買うときに困った場合に見るリスト</a></p>"
+              ]
+            },
+            {
+              "title": "連絡先",
+               "lines": [
+                "<p>from <a>SnO2WMaN</a></p>",
+                "<p>Twitter</p>"
+              ]
+            },
+            {
+              "title": "定期的にRTしていこうかな！",
+              "thumbnail": "https://tweet-card.now.sh/1386315211351543809.jpg?lang=ja"
+            },
+            {
+              "title": "今までのアイコン",
+              "thumbnail": "https://scrapbox.io/api/pages/sno2wman/2021.05.05/icon#.png"
+            },
+            {
+              "title": "テックブログ / 技術記事プラットフォーム / etc.",
+              "lines": [
+                "<p>スマホでツイッター見てばっかじゃねえか</p>"
+              ]
+            },
+            {
+              "title": "当面の目標",
+              "lines": [
+                "<p>2021年中に</p>",
+                "<p><a>bo2kshelf</a> もう飽きたな</p>",
+                "<p>すごい長いスパンで少しづつ出来ると良いな</p>"
+              ]
+            },
+            {
+              "title": "たすけて～",
+              "lines": [
+                "<p>助けていただけないでしょうか</p>",
+              ]
+            },
+            {
+              "title": "人は継続の生き物シリーズ",
+              "thumbnail": "https://tweet-card.now.sh/1273995449804795904.jpg?lang=ja"
+            },
+            {
+              "title": "2021.06.21",
+              "thumbnail": "https://gyazo.com/11fce64233f15db408e7bb572109e58f/raw",
+            },
+            {
+              "title": "マサカリブレイドーンだYO!",
+              "thumbnail": "https://nicothumb2img.vercel.app/image/sm34962217#.png",
+            },
+            {
+
+              "title": "2021.06.20",
+              "thumbnail": "https://gyazo.com/b97cc4fbcfc0c9fa83c0384333777ab8/raw",
+            },
+            {
+
+              "title": "USBみたいな部品が寄り集まって生物を作り、殴りあうブラウザゲーム",
+              "lines": [
+                "<a>https://twitter.com/SnO2WMaN/status/1406510402242895874</a>",
+              ]
+            },
+            {
+
+              "title": "mingrammer/diagrams",
+              "lines": [
+                "<a>https://github.com/mingrammer/diagrams</a>",
+                "<p><a></a></p>",
+                "<p>Diagram as Code</p>",
+              ]
+            },
+            {
+              "title": "ahuglajbclajep",
+              "thumbnail":  "https://scrapbox.io/api/pages/ahuglajbclajep/ahu/icon#.png",
+            },
+            {
+              "title": "ツイッター 最終回『ツイッター』",
+              "thumbnail": "https://tweet-card.now.sh/1257616376555945984.jpg?lang=ja",
+            },
+            {
+              "title": "slow-start.com",
+              "lines": [
+                "<a>https://slow-start.com/</a>",
+                "<p><a>スロウスタート</a></p>",
+                "<p><a>#かっこEサイト</a></p>",
+              ]
+            },
+            {
+              "title": "夜マック　ワザップ",
+              "lines": [
+                "<p><a>#自由研究</a></p>",
+                "<p>夜マックを頼むとたまに普通のものが出され、指摘すると交換してくれる</p>",
+              ]
+            },
+            {
+              "title": "2021.06.19",
+              "thumbnail": "https://gyazo.com/ff6e48053b177c3a9dbfaef35099f558/raw",
+            },
+            {
+              "title": "童貞が死ぬ服について",
+              "lines": [
+                "<p>童貞が死ぬ服とは、具体的には童貞が見ると死ぬ服と定義しよう</p>",
+              ]
+            },
+            {
+              "title": "後で見る",
+              "lines": [
+                "<p>どうせ見ない</p>",
+              ]
+            },
+            {
+              "title": "2021.06.18",
+              "thumbnail": "https://gyazo.com/3ac923c4598bd6d20540637af3d482fe/raw"
+            },
+            {
+              "title": "いろいろな .config.js で型の補完を効かせる方法まとめ",
+              "lines": [
+                "<p>著者<a>jay-es</a> in <a>zenn</a></p>",
+                "<p><a>JavaScript</a></p>",
+              ]
+            },
+            {
+              "title": "LQIP",
+              "lines": [
+                "<a>https://github.com/zouhir/lqip</a>",
+                "<p>凄まじく圧縮した画像を先に表示することでちらつきを抑える　同様の技術に<a>sqip</a>がある</p>",
+              ]
+            },
+            {
+              "title": "sqip",
+              "lines": [
+                "<a>https://github.com/axe312ger/sqip</a>",
+                "<p><a>#技術</a></p>",
+                "<p><a>#画像圧縮</a></p>",
+              ]
+            },
+            {
+              "title": "BlurHash",
+              "lines": [
+                "<a>https://github.com/woltapp/blurhash</a>",
+                "<p><a>#sqip</a><a>#LQIP</a>とかあの辺りかな</p>",
+                "<p><a>#技術</a></p>",
+              ]
+            },
+            {
+              "title": "30バイトで改善する画像読み込み体験: BlurHashアルゴリズムを用いたprogressive image loading",
+              "lines": [
+                "<p><a>#BlurHash</a></p>",
+                "<a>https://www.wantedly.com/companies/wantedly/post_articles/306561</a>"
+              ]
+            },
+            {
+              "title": "WAI-ARIA ロール",
+              "lines": [
+                "<a>https://developer.mozilla.org/ja/docs/Web/Accessibility/ARIA/Roles</a>"
+              ]
+            },
+            {
+              "title": "2021.06.17",
+              "thumbnail": "https://s2.booth.pm/94e9c4fd-c986-4510-b172-ac6b4cd540f0/i/3050769/b782689f-5b62-48d9-956f-737935576227_base_resized.jpg"
+            },
+            {
+              "title": "ヘリオス像　笑顔　Tシャツ",
+              "thumbnail": "https://s2.booth.pm/94e9c4fd-c986-4510-b172-ac6b4cd540f0/i/3050769/b782689f-5b62-48d9-956f-737935576227_base_resized.jpg"
+            },
+            {
+              "title": "2021.06.16",
+              "thumbnail": "https://user-images.githubusercontent.com/236306/121521307-d2703a80-c9eb-11eb-88ac-d8683aa11418.png"
+            },
+            {
+              "title": "rfctools",
+              "lines": [
+                "<a>https://github.com/paulej/rfctool</a>",
+                "<p>なんでも<a>RFC</a>にしてやろう</p>",
+                "<p><a>#技術</a></p>",
+              ]
+            },
+            {
+              "title": "wired elements",
+              "lines": [
+                "<a>https://wiredjs.com/</a>",
+                "<p><a>#技術</a></p>",
+                "<p><a>#webcomponents</a> <a>#lit-element</a></p>",
+              ]
+            },
+            {
+              "title": "2021.06.16",
+              "thumbnail": "https://s2.booth.pm/94e9c4fd-c986-4510-b172-ac6b4cd540f0/i/3045763/21c1b6fd-b373-4e47-b525-ed90f59e4306_base_resized.jpg"
+            },
+            {
+              "title": "Luv the Hanatic??",
+              "thumbnail": "https://nicothumb2img.vercel.app/image/sm38891901#.png"
+            },
+            {
+              "title": "宗教的プログラムの構造と解釈",
+              "lines": [
+                "<a>https://shonenjumpplus.com/episode/3269754496358577604</a>",
+              ]
+            },
+            {
+              "title": "2021.06.15",
+              "thumbnail": "https://gyazo.com/b2b2999a671a3219f872b13f86fb8378/raw"
+            },
+            {
+              "title": "GraphQLが解決する問題とその先のユースケース",
+              "lines": [
+                "<a>https://zenn.dev/saboyutaka/articles/07f1351a6b0049</a>",
+              ]
+            },
+            {
+              "title": "hygen で生成 - 対話形式の Component 雛形",
+              "lines": [
+                "<p>by <a>Takepepe</a> @<a>Zrnn</a></p>",
+                "<a>https://zenn.dev/saboyutaka/articles/07f1351a6b0049</a>",
+              ]
+            },
+            {
+              "title": "hygen で生成 - 対話形式の Component 雛形",
+              "lines": [
+                "<a>https://honeshabri.hatenablog.com/entry/ingokudanchi</a>",
+                "<p><a>骨しゃぶり</a></p>",
+              ]
+            },
+            {
+              "title": "人間乱数についての覚え書き",
+              "lines": [
+                "<a>https://xcloche.hateblo.jp/entry/2018/07/31/205525</a>",
+                "<p><a>xcloche</a></p>",
+              ]
+            },
+            {
+              "title": "関ヶ原山水図屏風",
+              "thumbnail": "https://i.ytimg.com/vi/cW4EQePf2Iw/mqdefault.jpg"
+            },
+            {
+              "title": "気配の箱",
+              "thumbnail": "https://i.ytimg.com/vi/k5k7Ea_oqmM/mqdefault.jpg"
+            },
+            {
+              "title": "Securing Your Website With Subresource Integrity",
+              "lines": [
+                "<a>https://css-tricks.com/securing-your-website-with-subresource-integrity/</a>",
+              ]
+            },
+            {
+              "title": "名画なら解像度が低くても分かる説",
+              "lines": [
+                "<a>https://honeshabri.hatenablog.com/entry/140px</a>",
+                "<p><a>骨しゃぶり</a></p>",
+              ]
+            },
+            {
+              "title": "2021.06.14",
+              "thumbnail": "https://gyazo.com/73a50a7185094629e13f36db75d261bb/raw"
+            },
+            {
+              "title": "Hina Face",
+              "lines": [
+                "<a>https://knowyourmeme.com/memes/hina-face</a>",
+                "<p>Due to the limited artistic capabilities of the game's creator, ZUN, however, the face is often seen by fans as something sillier instead.</p>",
+              ]
+            },
+            {
+              "title": "2021.06.13",
+              "thumbnail": "https://i.ytimg.com/vi/5wd0PWT414w/mqdefault.jpg"
+            },
+            {
+              "title": "Bad Apple!! but it's",
+              "thumbnail": "https://nicothumb2img.vercel.app/image/sm8628149#.png"
+            },
+            {
+              "title":　"2021.06.12",
+              "thumbnail": "https://gyazo.com/6aa7c8fabf33daa259e2d53e31f3b6df/raw",
+            },
+            {
+              "title": "摩耗文字",
+              "lines": [
+                "<a>https://viewer.heros-web.com/episode/3269754496311245345</a>",
+                "<p><a>#とくにある日々</a></p>",
+              ]
+            },
+            {
+              "title": "Doki Doki Lieterature Club Plus",
+              "lines": [
+                "<a>https://ddlc.plus/</a>",
+                "<p><a>#DDLC+</a></p>",
+              ]
+            },
+            {
+              "title": "mercurius",
+              "lines": [
+                "<a>https://github.com/mercurius-js/mercurius</a>",
+                "<p><a>GraphQL</a> <a>Fastify</a></p>",
+              ]
+            },
+            {
+              "title":　"2021.06.11",
+              "thumbnail": "https://gyazo.com/6fa1ac9cb57fdd532642c7bd8233b300/raw",
+            },
+            {
+              "title":　"働けーー！！！",
+              "thumbnail": "https://gyazo.com/7b3b07a42c3eb7d1488f5c055d495c1c/raw",
+            },
+            {
+              "title":　"でじこが来たにょ",
+              "thumbnail": "https://gyazo.com/40ba9ffffd7edd7052f534df814fa270/raw",
+            },
+            {
+              "title":　"来てくれてありがとう　来てくれてありがとう　帰れ",
+              "thumbnail": "https://gyazo.com/40ba9ffffd7edd7052f534df814fa270/raw",
+            },
+            {
+              "title":　"和多志はロボットではありません",
+              "thumbnail": "https://gyazo.com/bd546cd0ea2d7e138d49e1286076ce00/raw",
+            },
+            {
+              "title":　"信じるものがワザップしか無い時代が一番楽しかった",
+              "thumbnail": "https://gyazo.com/1cfd1479d671e769c317e2716e557644/raw",
+            },
+            {
+              "title":　"2021.06.09",
+              "thumbnail": "https://gyazo.com/99a88cab1d92e105a094e96f393bdf38/raw",
+            },
+            {
+              "title":　"2021.06.08",
+              "thumbnail": "https://gyazo.com/30c84b79390bda1d83e35973f5ae6289/raw",
+            },
+            {
+              "title": "ARPANET 1969 vs Internet 2021",
+              "thumbnail":  "https://gyazo.com/99a88cab1d92e105a094e96f393bdf38/raw",
+            },
+            {
+              "title": "C言語の乱数について諸々",
+              "lines": [
+                "<p>書いた日：<a>2021.06.09</a></p>",
+                "<a>https://w.atwiki.jp/gcmatome/pages/2574.html</a>",
+              ]
+            },
+            {
+              "title": "awesome-alternatives-in-rust",
+              "lines": [
+                "<a>https://github.com/TaKO8Ki/awesome-alternatives-in-rust</a>",
+              ]
+            },
+            {
+              "title": "paru",
+              "lines": [
+                "<a>https://github.com/Morganamilo/paru</a>",
+                "<p>Alterniabrin <a>yay</a> in <a>Rust</a></p>"
+              ]
+            },
+            {
+              "title": "lemmy",
+              "lines": [
+                "<a>https://github.com/LemmyNet/lemmy</a>",
+                "<p>Alternative Reddit in <a>Rust</a></p>"
+              ]
+            },
+            {
+              "title": "論理哲学論考",
+              "lines": [
+                "<p><a>ウィトゲンシュタイン</a>著，<a>野矢茂樹</a>訳，<a>岩波文庫</a></p>"
+              ]
+            },
+            {
+              "title": "shikijs",
+              "lines": [
+                "<p><a>#技術</a> <a>#JavaScript</a> <a>#シンタックスハイライト</a></p>"
+              ]
+            },
+            {
+              "title": "2021.06.07",
+              "thumbnail":  "https://gyazo.com/43bc51220a4ef3af0b92f5ce91d6f52b/raw",
+            },
+            {
+              "title": "Archcraft",
+              "lines": [
+                "<p><a>ArchLinux</a>ベースのなにか</p>"
+              ]
+            },
+            {
+              "title": "⎳ℴ ⎷ ℯ",
+              "lines": [
+                "<p><a>困った時に</a></p>"
+              ]
+            },
+            {
+              "title": "2021.06.06",
+              "thumbnail":  "https://gyazo.com/022f662defe96146bca7131326c31722/raw",
+            },
+            {
+              "title": "2021.06.05",
+              "thumbnail":  "https://i.ytimg.com/vi/G72W4pmvw9s/mqdefault.jpg",
+            },
+            {
+              "title": "2021.06.04",
+              "thumbnail":"https://gyazo.com/6776895ab38aae148cb58cc7732b69b1/raw",
+            },
+            {
+              "title": "Element Queries / Container Queries",
+              "lines": [
+                "<p><a>Element Queries</a></p>"
+              ]
+            },
+            {
+              "title": "stylis",
+              "lines": [
+                "<p><a>styled-components</a>は実際にはこれを噛んでCSSに変換している　のか？</p>"
+              ]
+            },
+            {
+              "title": "2021.06.03",
+              "thumbnail": "https://gyazo.com/7b3092cd053c511c41c8139c5e7ca76a/raw",
+            },
+            {
+              "title": "Webアクセシビリティ",
+              "lines": [
+                "<p>関連</p>",
+                "<p><a>#a11y</a></p>"
+              ]
+            },
+            {
+              "title": "これからはじめるWebアクセシビリティ",
+              "lines": [
+                "<a>https://booth.pm/ja/items/1044446</a>",
+              ]
+            },
+            {
+              "title": "『東方風神録』NORMALクリア",
+              "lines": [
+                "<p><a>#成し</a></p>",
+                "<p><a>2021.06.03</a></p>",
+              ]
+            },
+            {
+              "title": "Ethereum+Solidality入門",
+              "lines": [
+                "<p><a>#本</a></p>",
+                "<p><a>Chris Dannen</a></p>",
+              ]
+            },
+            {
+              "title": "集合・論理と位相",
+              "lines": [
+                "<p><a>#本</a></p>",
+                "<p><a>東京図書</a></p>",
+              ]
+            },
+            {
+              "title": "2021.06.02",
+              "thumbnail": "https://nicothumb2img.vercel.app/image/sm17757598#.png",
+            },
+            {
+              "title": "JavaScript-Equality-Table",
+              "thumbnail":  "https://gyazo.com/23c309eed171653dd9e20fedc4f8f83b/raw",
+            },
+            {
+              "title": "2021.06.01",
+              "thumbnail":  "https://gyazo.com/9a48f226c19583cad71275325943d159/raw",
+            },
+            {
+              "title": "蜘蛛が由来のインターネットの有象無象",
+              "lines": [
+                "<a>#自由研究</a>",
+                "<p><a>World Wide Web</a>の癖に蜘蛛が由来のものって無いな　あるのか？</p>",
+              ]
+            },
+            {
+              "title": "2021.05.31",
+              "thumbnail": "https://tweet-card.now.sh/1399045433100365825.jpg?lang=ja",
+            },
+            {
+              "title": "2021.05.30",
+              "thumbnail":  "https://gyazo.com/989eac8c801ac0d75ca53bb863f41444/raw",
+            },
+            {
+              "title": "wallpaper",
+              "thumbnail": "https://gyazo.com/17c5d5590c16ad6785d00ce358aee68f/raw",
+            },
+            {
+              "title": "2021.05.29",
+              "thumbnail":   "https://gyazo.com/088cf5c0d94cee61c85c6e4175fd0638/raw",
+            },
+            {
+              "title": "settings",
+              "lines": [
+                "<p><a>/MISONLN41/settings#5e9c0b6dec4fce0000fb4018</a></p>",
+                "<p><a>/MISONLN41/settings#5ea946dfec4fce0000eb1e27</a></p>",
+              ]
+            },
+            {
+              "title": "2021.05.28",
+              "thumbnail":  "https://gyazo.com/b195c5c41e91277541795c2ce99cbe50/raw",
+            },
+            {
+              "title": "atoms/molecules/organisms/templates/pages & Component/Container",
+              "lines": [
+                "<p>おれは勘で切り分け，勘で全てをやっている</p>",
+              ]
+            },
+            {
+              "title": "storybookまたはUIのテストについて",
+              "lines": [
+                "<p>これが最善手なわけがなくむしろ最も悪手ではあると思う</p>",
+              ]
+            },
+            {
+              "title": "2021.05.27",
+              "thumbnail":  "https://gyazo.com/6906f5dbd9dd4b71859cb27a2559b800/raw",
+            },
+            {
+              "title": "storybookまたはUIのテストについて",
+               "thumbnail":"https://gyazo.com/d675b573d1b2989aab274f1c3a0db646/raw",
+            },
+            {
+              "title": "2021.05.26",
+              "thumbnail":  "https://gyazo.com/7a359b4b74adac223b000ae65828e682/raw",
+            },
+            {
+              "title": "Render Token",
+                "lines": [
+                "<a>これが最善手なわけがなくむしろ最も悪手ではhttps://twitter.com/RenderToken Render Token (@RenderToken) | Twitterあると思う</a>",
+              ]
+            },
+            {
+              "title": "2021.05.25",
+              "thumbnail": "https://gyazo.com/4781a1b594a6bd1395a67bcb9194fb65/raw",
+            },
+            {
+              "title": "ドナルド・マクドナルド",
+                "lines": [　   ]
+            },
+            {
+              "title": "M1RACLES",
+              "lines": [
+                "<p><a>CVE</a></p>",
+              ]
+            },
+            {
+              "title": "2021.05.24",
+              "thumbnail":  "https://i.ytimg.com/vi/HSnYdO_1hLE/mqdefault.jpg",
+            },
+            {
+              "title": "2021.05.23",
+              "thumbnail":  "https://i.ytimg.com/vi/edj5NE-LJ1I/mqdefault.jpg",
+            },
+            {
+              "title": "twiss / Twitter Space Station",
+              "lines": [
+                "<p><a>Twitter</a>のスペースでこういう議題について某月某日にやりますみたいなのを書いておくサービス作ったらウケるのでは？</p>",
+              ]
+            },
+            {
+              "title": "https://github.com/vercel/next.js/issues/24566",
+              "lines": [
+                "<p><a>next.js</a>, <a>storybook</a></p>",
+              ]
+            },
+            {
+              "title": "k3s",
+              "lines": [
+                "<p>ミニマルな<a>Kubernetes</a></p>",
+                "<p><a>#技術</a></p>",
+              ]
+            },
+            {
+              "title": "k3d",
+              "lines": [
+                "<p><a>k3s</a>のwrapper</p>",
+                "<p><a>#技術</a></p>",
+              ]
+            },
+            {
+              "title": "もはやHTMLのclass属性はTailwindCSSのプロパティを当てるために存在しているに過ぎない",
+              "lines": [
+                "<p>この思想で全部やった場合、<a>Next.js</a>上で、<a>clsx</a>を全部<a>twind</a>のtwで置き換え、jitモードをONにすると最高の状態になると思うが、本当に正しいのか　これ？</p>",
+              ]
+            },
+            {
+              "title": "2021.05.22",
+              "thumbnail": "https://i.ytimg.com/vi/U_JVWlrdlyo/mqdefault.jpg",
+            },
+            {
+              "title": "とくにある日々",
+              "lines": [
+                "<p><a>なか憲人</a></p>",
+                "<a>https://viewer.heros-web.com/episode/3269632237305675090</a>",
+              ]
+            },
+            {
+              "title": "next-i18nextを利用してSSRのページが一切表示されない時",
+              "lines": [
+                "<a>https://github.com/isaachinman/next-i18next/issues/462#issuecomment-832793454</a>",
+              ]
+            },
+            {
+              "title": "next-i18next",
+              "lines": [  ]
+            },
+            {
+              "title": "2021.05.21",
+              "thumbnail": "https://gyazo.com/befcadc45651b383d68dcfe3ca377a60/raw",
+            },
+            {
+              "title": "2021.05.20",
+              "thumbnail":  "https://gyazo.com/a178ad2f34ce7f68b3b8dd4d90a6cf4c/raw",
+            },
+            {
+              "title": "2021.05.19",
+              "thumbnail": "https://i.ytimg.com/vi/uUuQQEUdjSQ/mqdefault.jpg",
+            },
+            {
+              "title": "2021.05.18",
+              "thumbnail":  "https://gyazo.com/c2e11316458eafac0a0d3dd24d69b46e/raw",
+            },　
+            {
+              "title": "2021.05.17",
+              "thumbnail":  "https://gyazo.com/fa5b37ea53954d6b9af8713e7ffc7c01/raw",
+            },
+            {
+              "title": "2021.05.16",　
+              "thumbnail":  "https://gyazo.com/9ff9ddaac0fb23969967113bb2f53fe3/raw",
+            },
+            {
+              "title": "2021.05.15",
+            "lines": [
+                "<p>前：<a>2021.05.15</a></p>",
+                "<p>後：<a>2021.05.17</a></p>",
+                "<p>#<a>日報</a></p>",
+              ]
+            },
+            {
+              "title": "2021.05.14",
+              "thumbnail":  "https://gyazo.com/a2b543736b59bedef13afa9688204378/raw",
+            },
+            {
+              "title": "2021.05.13",
+              "thumbnail":  "https://nicothumb2img.vercel.app/image/sm38705016#.png",
+            },
+          ]
+        each page in pages
+          li.page
+            .bg
+            .shadow
+            .covers
+              .cover
+              .cover
+              .cover
+              .cover
+            .pin-wrap
+              .pin
+            .contents
+              .header
+                .title #{page.title}
+              if page.thumbnail
+                .thumbnail
+                  img(src=page.thumbnail)
+              if page.lines
+                .description
+                  each line in page.lines
+                    != line
+
+    script(src="./index.js")
